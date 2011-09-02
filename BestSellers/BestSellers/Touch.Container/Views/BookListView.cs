@@ -28,7 +28,7 @@ namespace Touch.TestContainer.Views
 			foreach (var book in Model)
 			{
 				string isbn = string.IsNullOrEmpty(book.ISBN13) ? book.ISBN10: book.ISBN13;
-				string uri = String.Format("{0}/{1}", book.Category, isbn);
+				string uri = String.Format("Books/{0}/{1}", book.Category, isbn);
 			 	StringElement se = new StringElement(book.Title, () => {  MXTouchContainer.Navigate(uri); });
 				section.Add(se);
 			}

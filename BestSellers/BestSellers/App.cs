@@ -17,11 +17,14 @@ namespace BestSellers
 
             // Add navigation mappings
             NavigationMap.Add("", new CategoryListController());
-            NavigationMap.Add("{Category}", new BookListController());
-            NavigationMap.Add("{Category}/{Book}", new BookController());
+            NavigationMap.Add("Books/{Category}", new BookListController());
+            NavigationMap.Add("Books/{Category}/{Book}", new BookController());
+			
+			// Adding a naviagation uri for the MainTabs
+			NavigationMap.Add("MainTabs", new TabBarController());
 
-            // Set default navigation URI
-            NavigateOnLoad = "";
+            // Set the navigation URI to initialize the application's tabs
+            NavigateOnLoad = "MainTabs";
         }
     }
 }

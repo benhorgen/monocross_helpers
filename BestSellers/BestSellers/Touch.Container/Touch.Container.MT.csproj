@@ -121,6 +121,7 @@
     <Compile Include="MainWindow.xib.designer.cs">
       <DependentUpon>MainWindow.xib</DependentUpon>
     </Compile>
+    <Compile Include="Views\TabBarView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="..\..\..\Alpha %28branch%29\BestSellers\Touch.Container\Views\" />

@@ -32,7 +32,9 @@ namespace Touch.TestContainer
 			MXTouchContainer.AddView<BookList>(new Views.BookListView(), ViewPerspective.Read);
 			MXTouchContainer.AddView<Book>(new Views.BookView(), ViewPerspective.Read);
 			
-			MXTouchContainer.Navigate("");
+			MXTouchContainer.AddView<object> (new Views.TabBarView());
+			
+			MXTouchContainer.Navigate(MXApplication.Instance.NavigateOnLoad);
 			
 			return true;
 		}

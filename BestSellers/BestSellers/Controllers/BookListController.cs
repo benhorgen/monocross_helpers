@@ -27,6 +27,7 @@ namespace BestSellers.Controllers
             string urlBooks = String.Format("http://api.nytimes.com/svc/books/v2/lists/{0}.xml?api-key=d8ad3be01d98001865e96ee55c1044db:8:57889697", category.Replace(" ", "-"));
             try
             {
+				Console.WriteLine("trying: " + urlBooks);
                 XDocument loaded = XDocument.Load(urlBooks);
                 var books = from item in loaded.Descendants("book")
                             where item.Descendants().Count() > 9
@@ -40,7 +41,7 @@ namespace BestSellers.Controllers
                             };
                 Model.AddRange(books);
             }
-            catch { }
+            catch (Exception e) { Console.WriteLine("Exception loading Book List\r\n: " + e.ToString()); }
 
             return ViewPerspective.Read;
         }

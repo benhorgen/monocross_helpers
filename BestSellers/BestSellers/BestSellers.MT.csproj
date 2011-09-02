@@ -11,7 +11,7 @@
     <RootNamespace>BestSellers.MT</RootNamespace>
     <AssemblyName>BestSellersMT</AssemblyName>
     <MtouchMinimumOS>3.0</MtouchMinimumOS>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -81,11 +81,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions>
-    <MonoDevelop>
-      <Properties InternalTargetFrameworkVersion="IPhone" />
-    </MonoDevelop>
-  </ProjectExtensions>
   <ItemGroup>
     <ProjectReference Include="..\MonoCross.Navigation\MonoCross.Navigation.MT.csproj">
       <Project>{0C3337B2-0B8A-4C0B-8330-3B81F5B96B9B}</Project>
@@ -100,5 +95,6 @@
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\BookList.cs" />
     <Compile Include="Model\CategoryList.cs" />
+    <Compile Include="Controllers\TabBarController.cs" />
   </ItemGroup>
 </Project>
